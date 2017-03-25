@@ -14,8 +14,8 @@ var jokes = {
   }
 }
 
-console.log(jokes['setup'])
-console.log(jokes['punchline'])
+// console.log(jokes['setup'])
+// console.log(jokes['punchline'])
 
 // The message to display if the jokes object is empty
 var noJokesMessage = 'I... I don\'t know any jokes. 😢'
@@ -32,7 +32,7 @@ var updateJokes = function () {
   updatePage()
 }
 
-var getOldJokes = function () {
+var getJokes = function () {
   var stringifiedJokes = window.localStorage.getItem('jokes')
   if (stringifiedJokes != null) {
     jokes = JSON.parse(stringifiedJokes)
@@ -71,7 +71,7 @@ var updateDisplayedJoke = function () {
 var updatePage = function () {
   updateJokesMenu()
   updateDisplayedJoke()
-  getOldJokes()
+  getJokes()
   clearNewInput()
 }
 
