@@ -69,9 +69,9 @@ var updateDisplayedJoke = function () {
 // page update functions, so that we
 // can call them all at once
 var updatePage = function () {
+  getJokes()
   updateJokesMenu()
   updateDisplayedJoke()
-  getJokes()
   clearNewInput()
 }
 
